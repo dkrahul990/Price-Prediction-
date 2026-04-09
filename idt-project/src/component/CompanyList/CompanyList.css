@@ -1,0 +1,115 @@
+.company-list-container {
+    padding: 3rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 70vh;
+}
+.header-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #eaeaea;
+}
+.header-section h2 { margin: 0; color: #333; }
+.filter-box select {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    margin-left: 10px;
+}
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+.company-card {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.company-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+.card-header h3 { margin: 0; font-size: 1.3rem; color: #1a73e8; }
+.badge {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: white;
+}
+.badge.medical { background: #00bcd4; }
+.badge.life { background: #9c27b0; }
+.rating { margin-top: 0; font-weight: bold; }
+.est-charge { font-size: 1.1rem; color: #333; }
+.description { color: #666; font-size: 0.95rem; line-height: 1.4; }
+.apply-btn {
+    width: 100%;
+    margin-top: 15px;
+    background: #1976d2;
+}
+.apply-btn:hover { background: #115293; }
+
+.active-buy-card {
+    border: 2px solid #1976d2;
+    box-shadow: 0 5px 15px rgba(25, 118, 210, 0.2);
+}
+
+.card-purchase-section {
+    margin-top: 15px;
+    padding-top: 10px;
+    background: #fdfdfd;
+    animation: fadeIn 0.3s ease;
+}
+
+.terms-mini {
+    font-size: 0.8rem;
+    color: #555;
+    background: #f0f0f0;
+    padding: 8px;
+    border-radius: 4px;
+    max-height: 70px;
+    overflow-y: auto;
+}
+
+.buy-options select {
+    padding: 5px;
+    margin-left: 5px;
+    border-radius: 4px;
+}
+
+.terms-consent {
+    margin: 10px 0;
+    font-size: 0.9rem;
+}
+
+.final-buy-btn {
+    background: #4caf50;
+    width: 100%;
+}
+.final-buy-btn:hover { background: #388e3c; }
+
+.buy-status-msg {
+    margin-top: 10px;
+    color: #d32f2f;
+    font-weight: bold;
+    text-align: center;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}

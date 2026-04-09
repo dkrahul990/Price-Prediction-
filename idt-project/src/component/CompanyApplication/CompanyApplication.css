@@ -1,0 +1,106 @@
+.app-container {
+    padding: 3rem 1rem;
+    max-width: 900px;
+    margin: 0 auto;
+    min-height: 70vh;
+}
+.header-banner {
+    background: #e3f2fd;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.header-banner h1 { margin: 0; color: #1976d2; font-size: 1.5rem; }
+.header-banner h2 { margin: 10px 0; color: #333; }
+.progress-bar {
+    margin-top: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+.active-step { color: #1976d2; border-bottom: 3px solid #1976d2; padding-bottom: 5px; }
+.completed-step { color: #4caf50; }
+.step-arrow { color: #999; }
+
+.medical-form {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+.input-group label { display: block; margin-bottom: 5px; font-weight: bold; color: #444; }
+.input-group input, .input-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.proceed-btn { width: 100%; margin-top: 20px; padding: 15px; font-size: 1.1rem; }
+
+/* Payment UI */
+.payment-container {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+.amount-display {
+    text-align: center;
+    background: #f1f8e9;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #c5e1a5;
+}
+.amount-display h3 { margin: 0; color: #2e7d32; font-size: 2rem; }
+.payment-selector {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+.payment-selector label {
+    padding: 10px 20px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.payment-selector .active-pm {
+    border-color: #1976d2;
+    background: #e3f2fd;
+    font-weight: bold;
+}
+.payment-fields input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+.card-row { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+
+.terms-agreement { margin-top: 20px; }
+.legals {
+    font-size: 0.85rem; color: #666; background: #f9f9f9; padding: 10px; border-radius: 4px;
+    max-height: 80px; overflow-y: scroll;
+}
+.checkbox-label { font-weight: bold; display: flex; align-items: center; gap: 10px;}
+.checkbox-label input { width: auto; transform: scale(1.2); }
+
+.finalize-action-btn { width: 100%; padding: 15px; background: #4caf50; font-size: 1.2rem; margin-top: 20px; }
+.finalize-action-btn:hover { background: #388e3c; }
+.buy-status { text-align: center; font-weight: bold; color: #d32f2f; margin-top: 15px; }
+
+@media (max-width: 600px) {
+    .form-grid { grid-template-columns: 1fr; }
+}

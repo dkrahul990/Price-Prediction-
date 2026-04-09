@@ -1,0 +1,28 @@
+.dashboard-container {
+    padding: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    min-height: 65vh;
+}
+.purchase-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+.purchase-table th, .purchase-table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+.purchase-table th { background: #f0f4f8; color: #333; }
+.badge {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: white;
+}
+.badge.medical { background: #00bcd4; }
+.badge.life { background: #9c27b0; }
