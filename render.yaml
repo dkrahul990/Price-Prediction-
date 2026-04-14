@@ -1,0 +1,46 @@
+services:
+  # ── Backend: Flask API ────────────────────────────────────────────────────
+  - type: web
+    name: insurance-backend
+    runtime: python
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
+    plan: free
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
+
+  # ── Frontend: React / Vite static build ───────────────────────────────────
+  - type: web
+    name: insurance-frontend
+    runtime: static
+    rootDir: frontend
+    buildCommand: npm install && npm run build
+    staticPublishPath: dist
+    plan: free
+    routes:
+      - type: rewrite
+        source: /predict
+        destination: https://insurance-backend.onrender.com/predict
+      - type: rewrite
+        source: /login
+        destination: https://insurance-backend.onrender.com/login
+      - type: rewrite
+        source: /register
+        destination: https://insurance-backend.onrender.com/register
+      - type: rewrite
+        source: /companies
+        destination: https://insurance-backend.onrender.com/companies
+      - type: rewrite
+        source: /companies/*
+        destination: https://insurance-backend.onrender.com/companies/*
+      - type: rewrite
+        source: /buy
+        destination: https://insurance-backend.onrender.com/buy
+      - type: rewrite
+        source: /user/*
+        destination: https://insurance-backend.onrender.com/user/*
+      - type: rewrite
+        source: /*
+        destination: /index.html

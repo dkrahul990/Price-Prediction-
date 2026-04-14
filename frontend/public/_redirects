@@ -1,0 +1,8 @@
+/predict        https://insurance-backend.onrender.com/predict        200
+/login          https://insurance-backend.onrender.com/login          200
+/register       https://insurance-backend.onrender.com/register       200
+/companies/*    https://insurance-backend.onrender.com/companies/:splat 200
+/companies      https://insurance-backend.onrender.com/companies      200
+/buy            https://insurance-backend.onrender.com/buy            200
+/user/*         https://insurance-backend.onrender.com/user/:splat    200
+/*              /index.html                                            200

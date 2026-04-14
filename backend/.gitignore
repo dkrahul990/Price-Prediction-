@@ -1,0 +1,6 @@
+# Ignore virtual environment only — model and DB must be committed for Render
+venv/
+__pycache__/
+*.pyc
+*.pyo
+.env
